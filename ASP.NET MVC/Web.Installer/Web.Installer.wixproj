@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.5</ProductVersion>
+    <ProjectGuid>{ddbb345d-0a8a-4323-8ea6-3c9a27fd1ac4}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Web.Installer</OutputName>
+    <OutputType>Library</OutputType>
+    <!--JBR Use checked in tool chain and wix targets -->
+    <WixToolPath>$(MSBuildProjectDirectory)\..\..\wix_3.6.2221.0\</WixToolPath>
+    <WixTargetsPath>$(WixToolPath)Wix.targets</WixTargetsPath>
+    <!--<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>-->
+    <WixTasksPath>$(WixToolPath)wixtasks.dll</WixTasksPath>
+    <!--JBR Tell wix to run wix executables in 32 bit mode -->
+    <RunWixToolsOutOfProc>true</RunWixToolsOutOfProc>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;BuildLocation=$(SolutionDir)Web\obj\$(Configuration)\Package\PackageTmp</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Testing|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;BuildLocation=$(SolutionDir)Web\obj\$(Configuration)\Package\PackageTmp</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Integration|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>BuildLocation=$(SolutionDir)Web\obj\$(Configuration)\Package\PackageTmp</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>BuildLocation=$(SolutionDir)Web\obj\$(Configuration)\Package\PackageTmp</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Web.Installer.wxs" />
+    <Compile Include="Generated.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="transform.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web\Web.csproj">
+      <Name>Web</Name>
+      <Project>{72b2ffe6-33da-4bc3-b353-8b2ba9bdc78a}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>WEB_INSTALLFOLDER</RefTargetDir>
+      <WebProject>True</WebProject>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixIIsExtension">
+      <HintPath>$(WixExtDir)WixIIsExtension.dll</HintPath>
+      <Name>WixIIsExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <Target Name="BeforeBuild" DependsOnTargets="PreBuildEvent">
+    <MSBuild Projects="%(ProjectReference.FullPath)" Targets="Package" Properties="Configuration=$(Configuration);Platform=AnyCPU" Condition="'%(ProjectReference.WebProject)'=='True'" />
+    <PropertyGroup>
+      <LinkerBaseInputPaths>%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\</LinkerBaseInputPaths>
+    </PropertyGroup>
+    <HeatDirectory RunAsSeparateProcess="$(RunWixToolsOutOfProc)" OutputFile="Generated.wxs" Directory="%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\" DirectoryRefId="WEB_INSTALLFOLDER" ComponentGroupName="WebGrp" AutogenerateGuids="false" GenerateGuidsNow="true" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WixToolPath)" Condition="'%(ProjectReference.WebProject)'=='True'" PreprocessorVariable="var.BuildLocation" Transforms="transform.xslt" />
+    <!-- Should workd but access denied error
+    <Delete Files="Generated.wxs" />
+    -->
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>DEL /F /Q "$(ProjectDir)Generated.wxs"</PreBuildEvent>
+  </PropertyGroup>
+  <!--
+  To modify your build process, add your task inside one of the targets below and uncomment it.
+  Other similar extension points exist, see Wix.targets.	
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
+  <Fragment>
+    <DirectoryRef Id="WEB_INSTALLFOLDER">
+      <!-- With this entry you can modify your web.config file (<util:XmlFile <util:XmlConfig ...) with the installer -->
+      <Component Id="cmp713AC4BECF7C4F61BCAFA4D37DC83D30" Guid="{E891D4EB-2769-4A2F-B147-4DFE859628DB}">
+        <File Id="fil6306ECBBC78FEDC360C4612E0DCF2D36" KeyPath="yes" Source="$(var.BuildLocation)\Web.config" />                
+      </Component>
+
+      <Component Id="cmpWebVirtualDirComponent" Guid="{09844EDF-BC8D-4407-8D36-E7CCC6AD46EB}">        
+        <!-- This is pretty important. If the CreateFolder isn't there the 
+                 WebVirtualDir won't get created as there's no files in this 
+                 component. 
+                 http://www.mail-archive.com/wix-users@lists.sourceforge.net/msg03483.html -->
+        <CreateFolder/>
+
+        <!-- Create a AppPool for IIS 7 and .NET 4 in Integrated mode -->
+        <iis:WebAppPool Id="ApplicationPool" Name="WebApp v4.0" 
+                        ManagedPipelineMode="Integrated" 
+                        ManagedRuntimeVersion="v4.0">          
+        </iis:WebAppPool>
+
+        <!-- For installing a web site under an 
+         existing web site, "Default Web Site", you have to keep this element 
+         outside of a component. See the WiX documentation: 
+         http://wix.sourceforge.net/manual-wix3/iis_xsd_website.htm. 
+         Basically, outside a component means it's a locator/searching. Inside 
+         a component means it's a creator. -->
+        <iis:WebSite Id="WebSite"
+                     Description="WebSite for WebApp"
+                     Directory="WEB_INSTALLFOLDER"
+                     AutoStart="yes"
+                     ConfigureIfExists="yes"
+                     StartOnInstall="yes">            
+          <!-- This element has to be here or WiX does not compile. It's ignored 
+           in this case. -->
+          <iis:WebAddress Id="AllUnassigned" Port="8080" />        
+          <iis:WebApplication Id="WebApplication" Name="WebApp" WebAppPool="ApplicationPool">          
+          </iis:WebApplication>
+        </iis:WebSite>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ManualWebGrp">
+      <ComponentRef Id="cmp713AC4BECF7C4F61BCAFA4D37DC83D30" />
+      <ComponentRef Id="cmpWebVirtualDirComponent" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="WEB_INSTALLFOLDER">
+            <Component Id="cmp7404EBA752964BB6986E1CFADA223B22" Guid="{7A9D2A18-542F-4823-AF19-CF2E1C79C07F}">
+                <File Id="fil100E83B54DBB7F99C48A91B19F93D68E" KeyPath="yes" Source="$(var.BuildLocation)\Global.asax" />
+            </Component>
+            <Component Id="cmp6B9D725E68FB5EB02B976985787AA618" Guid="{170C0A6A-3082-4B2A-AB14-F201B8669BA9}">
+                <File Id="fil4231EEB8A72D5521CC6A69FFC005C108" KeyPath="yes" Source="$(var.BuildLocation)\packages.config" />
+            </Component>
+            <Component Id="cmp10195F7E437423E1CBAC9E2CFDA4D1F8" Guid="{A1C5A1B3-3364-4FF7-B250-2D09019AA3C4}">
+                <wix:CreateFolder xmlns:wix="http://schemas.microsoft.com/wix/2006/wi" />
+            </Component>
+            <Directory Id="dirD7A262D4AA11518200C56049FF9DA9AA" Name="bin">
+                <Component Id="cmpEAAD96E19D2337FD7BF1F94D6B02FC8F" Guid="{910B60AC-A1EA-4755-BA85-64AAD4C0813B}">
+                    <File Id="fil200C92910163739A270D235C4BC1BC8B" KeyPath="yes" Source="$(var.BuildLocation)\bin\Boo.Lang.Compiler.dll" />
+                </Component>
+                <Component Id="cmp48375997FC535BC8CAA8836680204BCA" Guid="{D778D575-F369-46CF-80E0-DE1B5EAF5DDB}">
+                    <File Id="fil4D0B40AF6504A7B31EA050525DFB02B4" KeyPath="yes" Source="$(var.BuildLocation)\bin\Boo.Lang.dll" />
+                </Component>
+                <Component Id="cmpB8B09633C970E4C631C775F88CCFF3AA" Guid="{369D4604-C3A9-4025-ABA2-E075E85DDE36}">
+                    <File Id="fil1BE1E756CFB42E49D93D4C9930B7AE14" KeyPath="yes" Source="$(var.BuildLocation)\bin\Boo.Lang.Parser.dll" />
+                </Component>
+                <Component Id="cmp5892202513E0B0034B8B427E1A0BF3A9" Guid="{39DC0591-8698-4CBC-832F-8FB98632827B}">
+                    <File Id="filB970941570F810B29CC1B3F99A295235" KeyPath="yes" Source="$(var.BuildLocation)\bin\Common.Logging.dll" />
+                </Component>
+                <Component Id="cmpD50B063991B54F9880D5A9E74FE84CD3" Guid="{8ADBCD28-329E-4769-B225-DEC8BF95801E}">
+                    <File Id="filF871F4AD623A8F3BB7BB9E880A71CC29" KeyPath="yes" Source="$(var.BuildLocation)\bin\Common.Logging.Elmah.dll" />
+                </Component>
+                <Component Id="cmp194CC70CC8393886A0B5C3ED26656A4C" Guid="{347CD55D-938E-4F65-A24D-6F7B506BAC3E}">
+                    <File Id="fil7DF9BFE352E28AE79A67C10121A3FA78" KeyPath="yes" Source="$(var.BuildLocation)\bin\Datatables.Mvc.dll" />
+                </Component>
+                <Component Id="cmp47C5016C45D29D4C720E34F5FD8D576F" Guid="{52604A5C-8C95-490C-A328-F91F919274B1}">
+                    <File Id="fil38EB74A106F7EECDC7B93F783A3395B7" KeyPath="yes" Source="$(var.BuildLocation)\bin\Elmah.dll" />
+                </Component>
+                <Component Id="cmp8609E4C5AF44B79B79792C6B9557315E" Guid="{E1D97CB6-53D9-4A2F-8768-58D4A0110ABA}">
+                    <File Id="fil0426191989FEE01E6A0362FD81EA7D17" KeyPath="yes" Source="$(var.BuildLocation)\bin\EntityFramework.dll" />
+                </Component>
+                <Component Id="cmp4AB7918A9E6471636DC080F7D76E0BDB" Guid="{E3081286-F46A-4524-94CF-8F50A963C2C6}">
+                    <File Id="fil6CE5BF13E2302AC84A9560BDED6B4B8B" KeyPath="yes" Source="$(var.BuildLocation)\bin\EntityFramework.xml" />
+                </Component>
+                <Component Id="cmp2E397730523E8ACC3198B577C53AC0F7" Guid="{6A7474AD-0586-46C8-B0C3-E9A9517E4D9E}">
+                    <File Id="fil9C990820DBEDAF3C96BBB95466E8487D" KeyPath="yes" Source="$(var.BuildLocation)\bin\InfrastructureConfig.Dsl.dll" />
+                </Component>
+                <Component Id="cmpE382FFD25BAF67C9148C6963BE3804F3" Guid="{2131CAA1-721D-4911-9BE7-CF4425BA6FEE}">
+                    <File Id="filACC409DC1B475F004422145DCE5E37EA" KeyPath="yes" Source="$(var.BuildLocation)\bin\Rhino.DSL.dll" />
+                </Component>
+                <Component Id="cmpAAF5141D9E415187D118B78BB57DCA15" Guid="{CF164A34-A72C-4C83-97FB-928AF3111C58}">
+                    <File Id="fil8B3A619E4313C38BE2B6CBE63580F6B2" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Aop.dll" />
+                </Component>
+                <Component Id="cmp2E3D8BA9954D9797B44297A060717AE0" Guid="{6E6C8BA7-10E4-461C-B8A1-1F2D780E3683}">
+                    <File Id="fil1ED417CA88105D88DBA59E080EFF91E9" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Aop.pdb" />
+                </Component>
+                <Component Id="cmpF533AF5CD96EFF37F343D7CE7D97A6E4" Guid="{EDB22946-2E5B-4A58-957D-27FF5343F700}">
+                    <File Id="fil13A327794369F40AE854FEF2FA38BB02" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Aop.xml" />
+                </Component>
+                <Component Id="cmp2DB9C1F957F4274BB0FF4823EFB35DF9" Guid="{53D5E948-0AD1-4015-B70B-7129C2C3A4AD}">
+                    <File Id="filF8CF27DFDAFDA922FA5EC2FFCA3D457A" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.Configuration.dll" />
+                </Component>
+                <Component Id="cmp23E7DB4B33AD988E6C7EFA7630E150F1" Guid="{0C45B015-0472-4692-B621-1E45E9C0BAB2}">
+                    <File Id="fil59F0D1C3A9F5FAED433D51641D088621" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.Configuration.pdb" />
+                </Component>
+                <Component Id="cmp3F3748C2F73C72BE5CC78DB8A1C6A6EB" Guid="{05C67BEF-6147-4726-B7D2-3EE1DFBA2FF7}">
+                    <File Id="fil53A964DEF81FCB8F6EC353F24EDDC247" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.Configuration.xml" />
+                </Component>
+                <Component Id="cmp3CA2861BD4796B1E1D5954FB0423EEA8" Guid="{9CEFA505-6AB0-4394-9EDD-CEA0A7309719}">
+                    <File Id="fil953613B367113EFFE9007D0944D19D21" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.dll" />
+                </Component>
+                <Component Id="cmpF239975BC07906A8079BC632EECCDAB7" Guid="{CD129A2B-CFA7-4B94-9CBF-C1884B709849}">
+                    <File Id="filA5C6CCF757ECDF940943F39B474ED9C6" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.pdb" />
+                </Component>
+                <Component Id="cmpF670EEB2ADB17E226BD75B0D056FB182" Guid="{66CF4F7C-0350-460F-9F66-5CB64814C0CF}">
+                    <File Id="fil2D673EA4E1749D07D1999AB6D5889D99" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Core.xml" />
+                </Component>
+                <Component Id="cmp3F364B035E9A23777C4516EDBDA8D840" Guid="{D578FC5F-966C-4BB8-BAA9-14E8AEA27010}">
+                    <File Id="filF6546D7B2995CD44A8C60F2FC9D9A02D" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.dll" />
+                </Component>
+                <Component Id="cmp1D43A424E8EB6857121B810C3757F6DC" Guid="{0F4D0DB9-89E0-4F95-AA6F-56F5A6BA7B1E}">
+                    <File Id="fil129654F8203FD8A46D839E33B6512D56" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.Mvc3.dll" />
+                </Component>
+                <Component Id="cmpAA52EFBBF69BEBBE362EC3060CE4418B" Guid="{8E8F8F3F-7455-41CA-A7B3-D271C6BD2B0B}">
+                    <File Id="fil12BFE5F057F149EFD98B1E697C61FC5D" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.Mvc3.pdb" />
+                </Component>
+                <Component Id="cmp0F0F1FAB788645CDA8EEB6C4205A56B1" Guid="{1E553B6E-2307-43CA-A4BE-C5C38652BEA9}">
+                    <File Id="filE6E22ACCBA37987E696E1DE4AB817E3D" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.Mvc3.xml" />
+                </Component>
+                <Component Id="cmpFF12B8DFCBC18C81DD1214B08B693789" Guid="{EFF86D8F-FA9F-4E2B-95E5-ED060C91E6DD}">
+                    <File Id="filFC1978BA01DDDB4C66848C16A4E5534E" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.pdb" />
+                </Component>
+                <Component Id="cmp4F268C20DFF631F42CE616A04969C667" Guid="{F771AF67-FAEB-41D1-B34C-9387B46CC176}">
+                    <File Id="fil5F0FBE60A4D2047D9C30A33D3D4576B9" KeyPath="yes" Source="$(var.BuildLocation)\bin\Spring.Web.xml" />
+                </Component>
+                <Component Id="cmp8CAEF1AC8DB08EF3F81E4ED1C05542FC" Guid="{45DA1A29-5200-423F-9B58-D73634975A2A}">
+                    <File Id="fil8FC5D47CF29A8279202BCB53AF1928E4" KeyPath="yes" Source="$(var.BuildLocation)\bin\Web.dll" />
+                </Component>
+                <Component Id="cmp844A7FB59CE6E7088D381578F158331E" Guid="{88E0CE16-8FDC-4934-8F4B-0E33D3E38C40}">
+                    <File Id="fil23E3E95C2E49BF401710D408AEDA0420" KeyPath="yes" Source="$(var.BuildLocation)\bin\Web.pdb" />
+                </Component>
+            </Directory>
+            <Directory Id="dir0BF6F9C370BFD267DFCD1C2607A7770A" Name="Content">
+                <Component Id="cmp118A677E1395D98DE8358FB62661F8DA" Guid="{CA75CD23-65AC-4C78-88E8-B32C93928A49}">
+                    <File Id="filA26B00B5A2507AB566DEE50717159974" KeyPath="yes" Source="$(var.BuildLocation)\Content\Site.css" />
+                </Component>
+                <Directory Id="dirD59C7CD653C0A682F494FCF1D0695861" Name="DataTables-1.8.2">
+                    <Directory Id="dirBBBDA1A8C2B87A38866EEA2323AA1EEF" Name="extras">
+                        <Directory Id="dir0F6196599E8077871F01CF882D5ED2A0" Name="AutoFill">
+                            <Directory Id="dirCA7D2A4AC1D1B502EAC5A4B6EC392A7E" Name="media">
+                                <Directory Id="dir3AD68CDA2DC0B349FF48B5C490DFF447" Name="css">
+                                    <Component Id="cmp8F8DB90009B4CCFBC95DAC00347FD238" Guid="{6DDC9FA3-81AD-4028-BD4F-1065346248DA}">
+                                        <File Id="filE9B2865340DD921FFC0F94B96ED2D73E" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\AutoFill\media\css\AutoFill.css" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dir83C86B29FBD9E6A57F370B58F3EB87EC" Name="images">
+                                    <Component Id="cmp419EEE84C0B9AD0FC1020E221B0BE69B" Guid="{DC8E8FF1-BF0B-4488-B2DC-9F6A94C117B1}">
+                                        <File Id="filDC9E6DABC4A78EBD43790DD935BCACE3" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\AutoFill\media\images\filler.png" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirB1CB265024B8BBF0347ADCF842E096BB" Name="ColReorder">
+                            <Directory Id="dir61C8DC635504C27E7A620756F1EDF970" Name="ColReorder">
+                                <Directory Id="dir0D3124296D6328742787201E6FCEF9C2" Name="media">
+                                    <Directory Id="dirC828E8C520C805D92BFB7256A88008C2" Name="css">
+                                        <Component Id="cmp9F1BE08A3449C1A7BEA807C3899E1168" Guid="{521CB99C-ACD3-4E51-9BD1-69658D2F41C4}">
+                                            <File Id="filBBC4E534C5EE44234B0FC98BD6C6BE29" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColReorder\ColReorder\media\css\ColReorder.css" />
+                                        </Component>
+                                    </Directory>
+                                    <Directory Id="dirD4038A49DF7A214C83CD7E90C2EA66C9" Name="images">
+                                        <Component Id="cmpE1CDA1981CAA2F5E8240715E2855D77D" Guid="{2B169BF7-AACA-4023-A67C-E30F0DE66216}">
+                                            <File Id="fil86C92E878E9A6FD5EBA6C273AFA2B65A" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColReorder\ColReorder\media\images\insert.png" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dir940A7A2B443A6A9364E1D9DC06E4E54F" Name="media">
+                                <Directory Id="dir3EE433B0663E6689CEFFF3B2CE35B538" Name="css">
+                                    <Component Id="cmp7969AA35DB4830B8B0916B3A64AD433B" Guid="{AEFC273D-E475-4F94-99CA-471133A697D6}">
+                                        <File Id="fil1522B5A36C55A4413031578B38EA90D4" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColReorder\media\css\ColReorder.css" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dir03FC1D0179A81BAB90DF226E07022BC1" Name="images">
+                                    <Component Id="cmp2AC4BB3A18428AA0D8304D98B2D983E3" Guid="{9FB04EFF-26F1-45B3-B3D0-F9ECC12A555B}">
+                                        <File Id="filB447837B6C570CC9B0FE8079475BB4CA" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColReorder\media\images\insert.png" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirAF95B6C40DD53612BD076B716288179E" Name="ColVis">
+                            <Directory Id="dir1D14ACD395BDFB42EA96FBC57AD4D259" Name="ColVis">
+                                <Directory Id="dirA56F0C64F2F1D79AF757183F581D34E4" Name="media">
+                                    <Directory Id="dir24F923CD6F70ADB3CE84E61A89986CE6" Name="css">
+                                        <Component Id="cmpD2247A4DD7BF914E7866A18CE8FDB06B" Guid="{24D72F79-F822-41E7-A27D-E2F558C3757E}">
+                                            <File Id="filA3B15FD79591D2478AC1F056A28E3919" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\ColVis\media\css\ColVis.css" />
+                                        </Component>
+                                        <Component Id="cmp17F6663CE1485CA9FA2EA52662897340" Guid="{4E3C8F0C-5B5C-4C31-85E7-E319B534E861}">
+                                            <File Id="fil661B40FF8D5E37DC09928EA2CB10C3A7" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\ColVis\media\css\ColVisAlt.css" />
+                                        </Component>
+                                    </Directory>
+                                    <Directory Id="dir8C449AD3BBAF14CA667BFCC6F1A56E8A" Name="images">
+                                        <Component Id="cmp6AC45E6220515FDAB745D39E52F684FD" Guid="{9E3DAB26-042C-4898-B26F-6EC152E0766A}">
+                                            <File Id="fil7A5A44068687A5909812FF24C32946F6" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\ColVis\media\images\button.png" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dirE46BF1D8EB9F471E169B8BC0789F31B6" Name="media">
+                                <Directory Id="dir9E89E9A927ADE9549FFAEB27C0B23ED0" Name="css">
+                                    <Component Id="cmp8A0FF25EF60CA0E25185954AE1508E12" Guid="{79D71894-3F47-408B-9129-FAC2CBF8FCCE}">
+                                        <File Id="filDECA1568202BFCCBFB01115A63DBCC5D" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\media\css\ColVis.css" />
+                                    </Component>
+                                    <Component Id="cmp244FD1871C031CE9917ABC07DA9CAC11" Guid="{85604241-CB23-4D71-AFA2-F79827BD945F}">
+                                        <File Id="fil7680844B7E2F3B0EAE8A9639F3D7A526" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\media\css\ColVisAlt.css" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dir422B8CD68D344CFC0AC5D7A9DE269E52" Name="images">
+                                    <Component Id="cmpB38CE12831AE544D0E7E70205FC9F5F1" Guid="{9D210080-2FF3-4BB6-8234-709B85587868}">
+                                        <File Id="fil2F17ED06E23F47559F1E5870174D972F" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\ColVis\media\images\button.png" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirBB82DF296CBD837A23A01FEF870EEACD" Name="FixedColumns">
+                            <Directory Id="dirCD843C872562570786BA398D1313859E" Name="docs">
+                                <Directory Id="dir3ECFE3B226BA88D36D7413722383AA8C" Name="media">
+                                    <Directory Id="dirBC414A342114A885096E4D760EE466EF" Name="css">
+                                        <Component Id="cmp4E5A951EFB38807BF578786B68D9088F" Guid="{8DD4E9EB-531E-46EB-BACA-95AAF6C7DAEC}">
+                                            <File Id="fil97E6599BA3893E5413D0785A5263C4C3" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\FixedColumns\docs\media\css\doc.css" />
+                                        </Component>
+                                        <Component Id="cmp84696C6C6649A21F94933E86CE984D1D" Guid="{468AB30B-9FC3-49FD-B6C6-DA02C7083751}">
+                                            <File Id="fil0FF26014AD330CCCF334591B6332A4BE" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\FixedColumns\docs\media\css\shCore.css" />
+                                        </Component>
+                                        <Component Id="cmp5DF9680D86969E638E296D4AACABD93A" Guid="{4D0B8959-62BF-4F6C-9DAE-B439D2278CE1}">
+                                            <File Id="fil87CB937EF70A7095152A04663C8FE5BF" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\FixedColumns\docs\media\css\shThemeDataTables.css" />
+                                        </Component>
+                                    </Directory>
+                                    <Directory Id="dirE10C1A40BFFE86CAF49C88250024E3AB" Name="images">
+                                        <Component Id="cmpC4BF1EE917BC4C474ED448D725AF949D" Guid="{288E38DB-2761-4EEA-8C8F-E47865C42BE7}">
+                                            <File Id="filBDD7CF9CEA4BCF56E99BE9357994D811" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\FixedColumns\docs\media\images\arrow.jpg" />
+                                        </Component>
+                                        <Component Id="cmp0C8EE55591F1FAA8ED796DE593FA8E6C" Guid="{4F041568-6378-4315-8A77-0BD8BA32A82F}">
+                                            <File Id="fil19740AFA6D758B30E6599911C8E65ED4" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\FixedColumns\docs\media\images\extended.png" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dir03EBF830E8DF2E41135C76A219C25D95" Name="Scroller">
+                            <Directory Id="dirAF0FD439920378127B2911E92FE0B5B6" Name="media">
+                                <Directory Id="dirDED55728701CE39A7E08335D929D01EC" Name="docs">
+                                    <Directory Id="dir098CE37B311A6045EF1B483849B03538" Name="media">
+                                        <Directory Id="dir357B98F269A75F6155FE2836A3136267" Name="css">
+                                            <Component Id="cmp8DB6E2AF620C9F89C642D4B8D84B3331" Guid="{925B06EC-EFE8-42CE-B775-664467AA5094}">
+                                                <File Id="fil968D90F72F1BBE8021CD8898F85F495F" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\Scroller\media\docs\media\css\doc.css" />
+                                            </Component>
+                                            <Component Id="cmpD8391E3125B0FA2BC3DC92F38ED542CD" Guid="{4D07CE1F-DC11-4E03-B748-23679CD12262}">
+                                                <File Id="fil8305CA423CAC82C2AFC59E8EF74631FE" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\Scroller\media\docs\media\css\shCore.css" />
+                                            </Component>
+                                            <Component Id="cmpDEBC2ED1658E8CE9D1BBCA484EA4E061" Guid="{3553C5A3-0FFA-41AB-B458-C655192C1E30}">
+                                                <File Id="fil654D68561B0B8FD9C8C13B906EA29943" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\Scroller\media\docs\media\css\shThemeDataTables.css" />
+                                            </Component>
+                                        </Directory>
+                                        <Directory Id="dir0CACFDD14D3866104520C5B357E0894C" Name="images">
+                                            <Component Id="cmp0D0E22E3074E9E2933529BCF2D32E7A6" Guid="{4D5929B3-E155-4CC2-B5BD-97220A680100}">
+                                                <File Id="fil4BE8CEA0D8143940ABE80BBC361EC81C" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\Scroller\media\docs\media\images\arrow.jpg" />
+                                            </Component>
+                                            <Component Id="cmp89F2D1F947F3223608F64A20721D4E44" Guid="{EBAD66E0-EA4E-411A-8661-29BDF8B155CE}">
+                                                <File Id="fil15CDEA8FB5024D31A886E231F0D606E3" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\Scroller\media\docs\media\images\extended.png" />
+                                            </Component>
+                                        </Directory>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirF4D35B24E60D66DA811EB6FC2B970028" Name="TableTools">
+                            <Directory Id="dir9D24AF95F23236428019F3F6D15CC026" Name="media">
+                                <Directory Id="dir34401EBA09AE4257E5E04D53FEFEC15F" Name="css">
+                                    <Component Id="cmpE0FF2AE0253AFDA9B21AE5926659275B" Guid="{0A7B5201-219D-4E58-840C-C47B5B83026B}">
+                                        <File Id="fil5D8FC91AA575677912BCF89CD1064626" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\css\TableTools.css" />
+                                    </Component>
+                                    <Component Id="cmpE511CB3B38088C88CF795EB4FBCCFD92" Guid="{D2816584-95FE-4233-BD91-9E81D7C2D8F0}">
+                                        <File Id="fil6EB1DF3BFAC4C2F6609484B80E3AD197" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\css\TableTools_JUI.css" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dir409842D38F98BB21273F7E4C2538E9B3" Name="images">
+                                    <Component Id="cmp65E77C3F71CFA3021D3D1A88D88889BB" Guid="{2DE314F8-EFA2-4E1A-B72A-053874D42DFB}">
+                                        <File Id="fil3E361FAECED673B389F738ED7F4C733B" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\background.png" />
+                                    </Component>
+                                    <Component Id="cmp53028973FAD97EFF0E0AEFD3941C1823" Guid="{2595F403-C01F-4169-93C0-0D80B1E488CB}">
+                                        <File Id="filE135D95020A8C6FA670DE2FAB5BDD1FA" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\collection.png" />
+                                    </Component>
+                                    <Component Id="cmp896ECCBDA843ACCCFF11A7EF7162969F" Guid="{3F30CFBF-E582-4496-9CA4-37B8AE851FCB}">
+                                        <File Id="fil2FA8BC2D9AEF311D91144D9478AF9BFC" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\collection_hover.png" />
+                                    </Component>
+                                    <Component Id="cmp92F9B73F6CBCBA68A905B218929A092D" Guid="{392405F2-0C6D-4F05-B842-4A1E90B19CC7}">
+                                        <File Id="fil7C0CD7EA67E6AC907BDFBA7E26A123B0" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\copy.png" />
+                                    </Component>
+                                    <Component Id="cmp8EA5BDDB5C88398E670AEE8BD10905DF" Guid="{85D655DD-C9A7-485B-88C7-D4F3E685F94F}">
+                                        <File Id="filDF0FC736ECF704EF482DF98740CDBE44" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\copy_hover.png" />
+                                    </Component>
+                                    <Component Id="cmpB20D5F50C8766D2ED913CCFF00000333" Guid="{CB7882A8-3023-4A5C-BD5F-1427E2B0BDE1}">
+                                        <File Id="fil0E1C1FD75F085CFCB3BE9EED3B0199AC" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\csv.png" />
+                                    </Component>
+                                    <Component Id="cmp7D972CF6786568872E0AC5A3CA26F4D9" Guid="{20106277-018C-49D3-86DA-AD51112F1139}">
+                                        <File Id="fil2A2086DD3BFF5FAD63A984E187803F59" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\csv_hover.png" />
+                                    </Component>
+                                    <Component Id="cmpC9706939E403B60316058E06DBD9574E" Guid="{6FFBC87E-DC20-44E2-AF10-5A5B37D2145E}">
+                                        <File Id="fil1863380190F7ECEB85C3F0A46FCB00A3" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\pdf.png" />
+                                    </Component>
+                                    <Component Id="cmp6DD7076D66675CA5229E6CB2A6C543B8" Guid="{2372C321-A256-481C-BC2D-8DF236C8AB30}">
+                                        <File Id="fil2787A21D253BA80EADE3D825B431B522" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\pdf_hover.png" />
+                                    </Component>
+                                    <Component Id="cmpA5BE4EFE223300A6D2FE8F7BDE6BC315" Guid="{8F04D656-F088-4E24-8DD0-46F081E6CD1A}">
+                                        <File Id="fil3F520FD568A1DD3CD35BB88BAC000A74" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\print.png" />
+                                    </Component>
+                                    <Component Id="cmp775CC8F7B7FFF10A7F7790416CF48B15" Guid="{0EFB36D0-E811-48F0-A1ED-467857BCB7C3}">
+                                        <File Id="filB8E455F38B0FC0A1E89C290A58634039" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\print_hover.png" />
+                                    </Component>
+                                    <Component Id="cmp40698C6317D011B9FF4DE8C0A2CEEC2F" Guid="{BDE129C4-99E2-47B2-BFEC-B6D39C275C0C}">
+                                        <File Id="fil12A7785908D3367B49C8D8FD9D5BE2E8" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\xls.png" />
+                                    </Component>
+                                    <Component Id="cmp5995020DBDC839A95E975D44503110AD" Guid="{43D65149-B7E8-4E72-AD7A-8187ACFF2017}">
+                                        <File Id="fil5A41591BF6AD4BD48D7D190D1AFB8CDF" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\images\xls_hover.png" />
+                                    </Component>
+                                </Directory>
+                                <Directory Id="dirC80157E08315D3C3ADC165CF156FEEBC" Name="swf">
+                                    <Component Id="cmp627C1880F55E0CB5721391B6B3D4BDCB" Guid="{B7C960EA-4D11-44AC-9162-F02395CFBB98}">
+                                        <File Id="fil74F4254C758B988849F5690C2352C469" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\swf\copy_cvs_xls.swf" />
+                                    </Component>
+                                    <Component Id="cmpE0B421402D6062ED38AF751108CC8841" Guid="{858591D2-89DD-446D-8163-C3C792ECF003}">
+                                        <File Id="filB70D3336DC5DE4FC2991445D92C9545E" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\extras\TableTools\media\swf\copy_cvs_xls_pdf.swf" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                    </Directory>
+                    <Directory Id="dir22667081912FC2A78C6E792E02B69734" Name="media">
+                        <Directory Id="dir0CC30E0B46DD9E3F66BF9655297EE051" Name="css">
+                            <Component Id="cmp0C294A1CDB073163FB121DC79F5861DA" Guid="{8C5AE348-ACA5-4D4C-B44D-F45F58440972}">
+                                <File Id="fil3E12DAD76A8C352FBCF10E586BB01DC3" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\css\demo_page.css" />
+                            </Component>
+                            <Component Id="cmp7A10ED3D90873194A6FF4AE1B163FD57" Guid="{A8B9EEF2-52C5-45AE-8FAD-B376B83B533C}">
+                                <File Id="filB4D0542696F188B3AEB831BFEBC42FE4" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\css\demo_table.css" />
+                            </Component>
+                            <Component Id="cmp8F09663095AB5D92CED6C51C3B3EF25D" Guid="{318E42CE-C163-4DA0-AADF-0AF4E9A89DC0}">
+                                <File Id="fil53B5A5BEAD18D7D909C83830F7289C67" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\css\demo_table_jui.css" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dir397173815F3CD9A33D6CD26D73868536" Name="images">
+                            <Component Id="cmp4FC89131DC47BDA211D073CBDB8C47D9" Guid="{348C019A-D141-4562-9B43-7CB6670C0E54}">
+                                <File Id="filD0329F9497D5904D9F183E7898AA6AA2" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\back_disabled.jpg" />
+                            </Component>
+                            <Component Id="cmp593C0B0932D5A9EA7F5F9781D0D34196" Guid="{C11B793B-8275-4678-8FC8-35133BC88183}">
+                                <File Id="fil189E71883BDC259B2D7B11C75795125F" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\back_enabled.jpg" />
+                            </Component>
+                            <Component Id="cmp3EC1700AF750B4B79FDFE03A0AA33EFA" Guid="{BE3CE38A-0AC8-426D-9C7B-0C8566E4504F}">
+                                <File Id="filFCB97EB084BF072BD7650EBA6F78C631" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\favicon.ico" />
+                            </Component>
+                            <Component Id="cmp1502731CE88173A115474EE087FCA914" Guid="{3FEA481D-7241-4E94-80E4-0593E97385C3}">
+                                <File Id="filFDB1AF89ABA8C66C2CA51DF4406004C2" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\forward_disabled.jpg" />
+                            </Component>
+                            <Component Id="cmp4D694C5209F88085779256659B85E146" Guid="{F4E62DEE-2722-4AC2-9E5A-FD2E381CF9A6}">
+                                <File Id="filC70360F7537088C74C24AB7E07159524" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\forward_enabled.jpg" />
+                            </Component>
+                            <Component Id="cmp828AC57DAD32CB4306A3CE68400C851A" Guid="{B1CA54AA-FD3E-40A5-B696-ACAE7C425715}">
+                                <File Id="filCB9F2F8A8DCCEF2F21233A3D73E07483" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\sort_asc.png" />
+                            </Component>
+                            <Component Id="cmpA47BABBD134865EB566C4444C83E4280" Guid="{F4F493DB-9D5F-4163-AB19-4F1069ADE909}">
+                                <File Id="filC6C033C2FD6E1992BB26E8B3B65316E8" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\sort_asc_disabled.png" />
+                            </Component>
+                            <Component Id="cmp89866DE603AB2680A86B57C0FAE0EBA8" Guid="{146A492B-0940-4047-8BAE-AA2C2FFD707D}">
+                                <File Id="fil2398512ED7DF63C4978BEC054571EC20" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\sort_both.png" />
+                            </Component>
+                            <Component Id="cmp457CC0BDFAC057A0F4F3E8DA34CC33DB" Guid="{435052DA-FFFE-4183-A908-2097FE5C8B43}">
+                                <File Id="fil09AD3D8FF0E93374E9357E9BA9421FCD" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\sort_desc.png" />
+                            </Component>
+                            <Component Id="cmp905AFB900BD22932624BA1B45A2CF607" Guid="{AEFD5E4C-F4DD-40C3-B47C-A58F1593AC9F}">
+                                <File Id="fil22D8E490BAA0AE96ABE98D61877B0FC4" KeyPath="yes" Source="$(var.BuildLocation)\Content\DataTables-1.8.2\media\images\sort_desc_disabled.png" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+                <Directory Id="dir8A2C5905AF305DB24048EC821BC04F61" Name="themes">
+                    <Directory Id="dir8ABE211497420D8B38D14E70A2A956BC" Name="base">
+                        <Component Id="cmp4A7E5E737757BB8B13BCE5C5B0EACE20" Guid="{9DB5940C-11FF-4740-A0B8-FCB7E80CBA29}">
+                            <File Id="fil88D77C0D4B19B372E16B12F37C72B152" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.accordion.css" />
+                        </Component>
+                        <Component Id="cmp280FE4921F01CDE442BD1C40E590A8F1" Guid="{9E1D9234-6EA2-45ED-AFD9-16144A70A023}">
+                            <File Id="fil2C460C7AEA236E5B2FE883CD0A998E53" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.all.css" />
+                        </Component>
+                        <Component Id="cmp4256AE8A39AC1414840134E77009940A" Guid="{DEB15B3A-0C8B-444A-8805-0E52BE80AB26}">
+                            <File Id="fil9D011E0B1510A3BC1D17D34787B59528" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.autocomplete.css" />
+                        </Component>
+                        <Component Id="cmp62C76216B03F5115BAFF412B7A28663D" Guid="{94A9AC67-07EC-4915-BBD5-F28784A38B13}">
+                            <File Id="filA5CD248D5F99B9E6FFDCC3453CD1C8BA" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.base.css" />
+                        </Component>
+                        <Component Id="cmpB09D78E636E4D79DBBF0F5821F8504A0" Guid="{DAEF241E-3796-47E8-8715-D4F9AC86C3D1}">
+                            <File Id="fil38AC0796299442082CFDD6182B5D2F86" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.button.css" />
+                        </Component>
+                        <Component Id="cmp1A7B1D9D7D285089EF5225451BDB2E81" Guid="{55C9B171-DA7B-47D3-9E19-4AF7F097A9B5}">
+                            <File Id="fil4F2EFB14EAC70DC7582067F0CA2D1C2E" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.core.css" />
+                        </Component>
+                        <Component Id="cmpFAB963603A901F667A70EA9CD422BFE7" Guid="{D61F649D-91DB-42B3-8CF6-E02A6812AE24}">
+                            <File Id="filB049ED41CFFEDAAD197839A4E0D2C1BF" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.datepicker.css" />
+                        </Component>
+                        <Component Id="cmp6475DB99E386803E1426574ED939787C" Guid="{93D01A0D-30F5-42FA-889D-C3C08AA3C32A}">
+                            <File Id="fil865A8C0AA70201F8493AFD9EDE6536F0" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.dialog.css" />
+                        </Component>
+                        <Component Id="cmp485F0D42953FEF9DAEB68B3CA33319B7" Guid="{071F7465-23E4-4851-A44F-F63B3872EF3A}">
+                            <File Id="fil31B25354F192D0C4224E45F8EFFBBE2D" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.progressbar.css" />
+                        </Component>
+                        <Component Id="cmp2B7469085B2C36313B3D9E4892DE4B03" Guid="{80AE7293-FB35-407F-932E-F9FAD0C79623}">
+                            <File Id="fil47738CB432738D26AF1061663028A756" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.resizable.css" />
+                        </Component>
+                        <Component Id="cmpDF912F96DCEE58FC32575AE795A316BE" Guid="{5C13445B-986A-4F9D-AA37-8288EE4B99EF}">
+                            <File Id="fil1083608DE782B44B6750406BEE4149A3" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.selectable.css" />
+                        </Component>
+                        <Component Id="cmp2FE009891176DA124B4362954B33377C" Guid="{19A0A82B-7D64-44C8-8A2C-BC3624833EF6}">
+                            <File Id="fil149A59F37B45B8FA4C2BC01FE191EF05" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.slider.css" />
+                        </Component>
+                        <Component Id="cmp368B1A5B15ABB564A032E6768B941DDE" Guid="{BB3F3AE4-9801-4F44-A278-3CB7992AAA9D}">
+                            <File Id="filB66682CDB85410F430D55D2E250F858B" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.tabs.css" />
+                        </Component>
+                        <Component Id="cmpCDF957B193D780024384C4841BA550FA" Guid="{676C4219-FFBB-464A-99CB-AEE28A973FD5}">
+                            <File Id="filFDAF83AC58648E9107FF2F147EEEE050" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\jquery.ui.theme.css" />
+                        </Component>
+                        <Directory Id="dirD64C7348ED54751F4A2DAF29BF954519" Name="images">
+                            <Component Id="cmpD7E8A2E01974DD8A8C61A2C0B64181D2" Guid="{D5724B83-EAE7-4A03-8F57-5D480B54C973}">
+                                <File Id="fil42FD7BF1D090491F184D188F305B08F3" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+                            </Component>
+                            <Component Id="cmp5D88B79AF8DFD2F4B925AA14AF69FE53" Guid="{6335E480-F01E-4B9A-A04B-990CFDA36766}">
+                                <File Id="fil8F201C730025728883372FB79F480053" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+                            </Component>
+                            <Component Id="cmp9F006CB89D03E912883CE3A0183BE69D" Guid="{B88EA420-D102-4E25-84E2-F6DF1820E6A0}">
+                                <File Id="fil215CEE3B05A1975B6D8A43CE476E559D" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+                            </Component>
+                            <Component Id="cmpF0E5C4FB3FE99DC33D20A4BAE3FAD793" Guid="{DE3FC204-8249-4610-BBE0-BD4E6AC8C498}">
+                                <File Id="filE4EC64F6653EB41B925A114D4C48609F" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+                            </Component>
+                            <Component Id="cmpB9997C563FD8FE3B1EFDD20CD45CAF87" Guid="{A5BF48CB-6896-4A82-8544-30835DE41158}">
+                                <File Id="filD8A62EAA50095015AF506A30A83A671B" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+                            </Component>
+                            <Component Id="cmp94E84EBA4478E55482792E659DAF3336" Guid="{58C3C2D1-71B5-44E1-989D-05A88A249B0D}">
+                                <File Id="filDB84D5DFB2C6B82EBA2951C656F294E6" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+                            </Component>
+                            <Component Id="cmp47ABCC121F5F1F2AEBFBCB470CBE0BA9" Guid="{D92360A2-A4CD-4B69-BAC9-8CE129A80E9B}">
+                                <File Id="filF90A00F7AF31A009970185911CCE25B6" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+                            </Component>
+                            <Component Id="cmpF2A3C995BCB6BEC3C3585E0F1A6795C0" Guid="{F08BAD4A-E82F-4425-A1BB-15C7F972E3C5}">
+                                <File Id="fil668F806E0EDD71A07746AFAEE19BF79A" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+                            </Component>
+                            <Component Id="cmp34F9C63073B7CA4DBAD02F47EF6C6D0D" Guid="{077D3767-9CAD-4198-A02F-01A5B03037D0}">
+                                <File Id="fil289D7B60A0E0B38B82D588B66A44D162" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-icons_222222_256x240.png" />
+                            </Component>
+                            <Component Id="cmpAA1160E4D1DB55E88756F9171DC48858" Guid="{B6CE15CE-71FE-45DD-9B35-DED10CE58B4C}">
+                                <File Id="fil915CF18BED0F660EF969A1CA3E33C664" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+                            </Component>
+                            <Component Id="cmpA7292BDAC8D7CF74DD86C85EB0D096A7" Guid="{6BD48039-AB36-4EE1-9F8D-BF0A841B53EE}">
+                                <File Id="fil5A841304511E544CF5B6162AD71868AA" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-icons_454545_256x240.png" />
+                            </Component>
+                            <Component Id="cmp0675E430409FBD3F13244C120E615654" Guid="{5DE3DFBB-EB5E-4800-AF6A-9778F47CCB14}">
+                                <File Id="filB75792F1530803CADEF34C37F8F368BB" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-icons_888888_256x240.png" />
+                            </Component>
+                            <Component Id="cmp1A0FAF9A10F1A8DE44964D9BB0995B05" Guid="{249D8367-4704-4C97-9F8E-A59B5B11DF0A}">
+                                <File Id="filFA1922BCCA0C9A4888E7E5E913D2A7FD" KeyPath="yes" Source="$(var.BuildLocation)\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="dir8905A5B25D5F2AE862F90CEF4ACAC5D2" Name="Scripts">
+                <Component Id="cmp3FE1560E39DA6BAAEC14699DB8F598A1" Guid="{73C2902B-4945-4961-B22F-203F06E1CE6A}">
+                    <File Id="fil67296C21095AD154E621F8044FE7C854" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery-1.5.1-vsdoc.js" />
+                </Component>
+                <Component Id="cmpC79C69C510845F3220FE8A9903BD5DDE" Guid="{279C0220-DF01-4D05-A97B-0E424E90E65E}">
+                    <File Id="fil9CB27C114B88B987A97B4DF34631EF80" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery-1.5.1.js" />
+                </Component>
+                <Component Id="cmp255A3E882642130A93260857B56854CF" Guid="{C8D25ADD-86F3-4B77-BC4F-864135D72277}">
+                    <File Id="fil78FA869802C84255980F7E31F5E9DC8C" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery-1.5.1.min.js" />
+                </Component>
+                <Component Id="cmpB3E416AFE215148BCE51A85CD79AEBD8" Guid="{528A021A-877A-4340-9F4B-DAC7186321CE}">
+                    <File Id="filCF81FBD3902086871299D2EDCE3801D2" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery-ui-1.8.11.js" />
+                </Component>
+                <Component Id="cmpA230CC6D77CD1FF60FF34A698BF0A69E" Guid="{5348DA13-40F8-4DC9-ABFD-F11A4AB1B3E5}">
+                    <File Id="filD20C96009AE9CB49D0EF67F9B9908E3E" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery-ui-1.8.11.min.js" />
+                </Component>
+                <Component Id="cmpCD8FCCCF7A4E57F6D2A47D033588BD05" Guid="{52AB2BC6-45EC-4D17-A139-94A5988A089D}">
+                    <File Id="filA8A70EF1EE1D565CADCF4A95FA5BE0BE" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.unobtrusive-ajax.js" />
+                </Component>
+                <Component Id="cmp9B6F687CD653552719A65D85F80212CB" Guid="{97C1D00E-B1A7-4B98-BFC8-46DBC9DD35C4}">
+                    <File Id="fil12D59DBED1CE9BF57187938727C45D7C" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.unobtrusive-ajax.min.js" />
+                </Component>
+                <Component Id="cmp3CEC8EBFA25D8CD2AC9D4C55DEC99FDA" Guid="{B9638F13-6663-4CDD-A9B5-31C5E0272C5F}">
+                    <File Id="filDEE401EE84F783E4E9D32210877070FC" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.validate-vsdoc.js" />
+                </Component>
+                <Component Id="cmp842831C1D1601E8D437B64AC1026EF17" Guid="{C1DFFC0A-84F8-4DE1-B625-801346D68CC8}">
+                    <File Id="filA0D58A7FA746646D939F40AF3D42E913" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.validate.js" />
+                </Component>
+                <Component Id="cmpB57D46AC1BA23E5BE5CB2A816A7DE09C" Guid="{007B6617-8EE0-485A-A360-717655A58CC5}">
+                    <File Id="fil993DDA854550F18BB39905206AB1179B" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.validate.min.js" />
+                </Component>
+                <Component Id="cmp9288320512C3B0B281270BBF9F424613" Guid="{C1BC30C7-F846-4CA2-B5AA-BAA973A95B4E}">
+                    <File Id="fil3A8A659A1F144E0C472E3B1468FDF4C0" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.validate.unobtrusive.js" />
+                </Component>
+                <Component Id="cmp8011725ED8265AF3DEDEF5486D355A2C" Guid="{BF5DFF2E-E0C2-40B3-875B-7BA0DF0F3FC8}">
+                    <File Id="fil1E51CB2BAECD3DFE3DE117DFBFFB77AE" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\jquery.validate.unobtrusive.min.js" />
+                </Component>
+                <Component Id="cmpABCB382BCFED427F85F9BB2A668AA716" Guid="{9814C1A9-85F9-48CC-A7A5-7EFFA1ED2D27}">
+                    <File Id="fil47AFE14B8E1961585F73F57F1A5D0C1B" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftAjax.debug.js" />
+                </Component>
+                <Component Id="cmp1B0785481F8584A1AA0554A5CBDC0755" Guid="{9D9A74CF-5E02-489A-8BC8-A44D751E8FBF}">
+                    <File Id="fil4B053E6004A42C7263D725C5271E343B" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftAjax.js" />
+                </Component>
+                <Component Id="cmpB81CFC3CB78DBFCC4E20B1E57CA82959" Guid="{2FBE0FE7-F4C6-44DF-BC4E-57044557BEF3}">
+                    <File Id="fil0B79F85723544D11DA125CA0D5F42E8A" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftMvcAjax.debug.js" />
+                </Component>
+                <Component Id="cmpACD9314B6D0DD601CD26725BE8A1DE4D" Guid="{88118223-CBAD-48BC-8657-771528027588}">
+                    <File Id="fil9CC267E08EB596933D8305A77325B053" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftMvcAjax.js" />
+                </Component>
+                <Component Id="cmpE0FE44A4E825D64AC1371112D5048A3A" Guid="{B6C5ADE5-6554-4CEF-9EC5-B14111A1CCD6}">
+                    <File Id="filAEDCC09AF641CD4FE92554B68FCD1D2E" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftMvcValidation.debug.js" />
+                </Component>
+                <Component Id="cmpBE8834C97D27F54917A8BE053B35C07E" Guid="{DE60F9D4-CC14-485F-BB07-8665FB433F91}">
+                    <File Id="fil8E217BAE3A7510E7A1B4AE25D9CBB4FD" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\MicrosoftMvcValidation.js" />
+                </Component>
+                <Component Id="cmpFA17196C51ED0BE005776F62EB9B4C82" Guid="{FD5AB6BA-95C4-4A23-8C8C-95F095A21059}">
+                    <File Id="fil3D1257162A76D04E561EA57F6B5877C2" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\modernizr-1.7.js" />
+                </Component>
+                <Component Id="cmp9EAC341A36E90C1FA9CC14383CBF4975" Guid="{C72F06BE-09B7-44DB-8D00-14ECC71687CF}">
+                    <File Id="fil5A12C613F87198659B893DEED3C9D1D3" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\modernizr-1.7.min.js" />
+                </Component>
+                <Directory Id="dirA5101FBF81CCD55F1103D39ABF4F6E52" Name="DataTables-1.8.2">
+                    <Directory Id="dirFD794C63D9DB0CD7774931BB4272BCDD" Name="extras">
+                        <Directory Id="dirD0B92918336A8D0E2BF5EC55C591B000" Name="AutoFill">
+                            <Directory Id="dirE7BB60E2C3906CD22434821CE335E0FF" Name="media">
+                                <Directory Id="dir0A9912E2B4E3871E8A331F91508FD81D" Name="js">
+                                    <Component Id="cmp8E4CDC05C8FC9471B7F0BF708BE4D204" Guid="{7BBE59CF-FC88-41B6-A648-F1090C38FB0A}">
+                                        <File Id="fil688026509785A1A97ACE6DF5D762D9DF" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\AutoFill\media\js\AutoFill.js" />
+                                    </Component>
+                                    <Component Id="cmpACC5872D1A80ADC854D432DADD0FE095" Guid="{2A6360C9-37C9-4842-A110-4600375D2E5E}">
+                                        <File Id="filF4A830A3BD68E2F92CFB02D48E13F168" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\AutoFill\media\js\AutoFill.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirC837259BEF377E05A33835D191D3D458" Name="ColReorder">
+                            <Directory Id="dir20DE11986DC3028CFEC5F7FF167DCD52" Name="ColReorder">
+                                <Directory Id="dir9D20D223350DF93864E4019F70D30462" Name="media">
+                                    <Directory Id="dirDFC00602C06FB79A68B92D66875DAA30" Name="js">
+                                        <Component Id="cmp10FBBF93C41EFC243E4D2A176DC7FF8E" Guid="{3EB065C5-47D7-4342-8EAE-BD16B274FDBE}">
+                                            <File Id="filCE2E50338F56465A8804FB22C1D6AF76" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColReorder\ColReorder\media\js\ColReorder.js" />
+                                        </Component>
+                                        <Component Id="cmp9DAC9E6551FAFE764C94ACDA2D22CD51" Guid="{A81C99A3-76CE-40D5-AB5A-E0FDF59851D5}">
+                                            <File Id="fil642A3C8D77F06B9345478DC537B641EF" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColReorder\ColReorder\media\js\ColReorder.min.js" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dirBA0118D7169A74A4D26969E6B5627981" Name="media">
+                                <Directory Id="dir118D933FF4C5EF1C487742B3FD578B7E" Name="js">
+                                    <Component Id="cmp281807579F6F3E473DCF3842A01659E3" Guid="{6C2B8D82-C4B4-47B3-855C-2E1E031D9333}">
+                                        <File Id="fil3998066D5BF0EF150CAED5F2C5E6F858" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColReorder\media\js\ColReorder.js" />
+                                    </Component>
+                                    <Component Id="cmp9270640C9BFBDF2DF1F3BB2E1C6DC408" Guid="{E2BD6CD0-997B-4DA3-B0EA-A36017DD66EE}">
+                                        <File Id="fil2741900581CFEF9361F1EF8A2E8B6383" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColReorder\media\js\ColReorder.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirE3DB39A5735553F35522192108385BBF" Name="ColVis">
+                            <Directory Id="dirDBAB9BE467A591A730AA31BE935A25B3" Name="ColVis">
+                                <Directory Id="dir6CC4F8ACD5EFEAA8C3B962C453BDFCC0" Name="media">
+                                    <Directory Id="dir89E663C305959AE94EDECFA9FB914E70" Name="js">
+                                        <Component Id="cmp676B6F6F61959CC7DF2EC0AAABE2F412" Guid="{99CA29A2-43A8-4250-AB9B-046A52052CA0}">
+                                            <File Id="fil0EA3FDF0DC4AAFD4B8F7363C7C3EF27D" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColVis\ColVis\media\js\ColVis.js" />
+                                        </Component>
+                                        <Component Id="cmp6A181DC2919A0F0B940791C8D05705E7" Guid="{46C329CB-BE02-4B32-8E70-61DD2F5A9E29}">
+                                            <File Id="fil6714F99AAE7BB1B6051533EA8C0406D3" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColVis\ColVis\media\js\ColVis.min.js" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dirF2D952C7711916DC929E7579355EF5E1" Name="media">
+                                <Directory Id="dir06286C2CA3C8B44F9FB94223B4B6C5E3" Name="js">
+                                    <Component Id="cmp71EC43A62F44CE1BDC1B52BFB7C73703" Guid="{424FC2CF-8EB7-4663-98E2-057CAD081210}">
+                                        <File Id="filDF6C8487BF1DF4BF940BCF34D147BA10" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColVis\media\js\ColVis.js" />
+                                    </Component>
+                                    <Component Id="cmp5E1A3928D1BF6129E26017BB37308DFB" Guid="{A0FF9FA9-1CF4-4BCA-9AAE-BC1E21BC2AA0}">
+                                        <File Id="fil225F74E17D645A8D0B002CBB4C5A72C2" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\ColVis\media\js\ColVis.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dir6F7EBD9B8094F5B7148C9F3AAC04B563" Name="FixedColumns">
+                            <Directory Id="dir50704F2FF90CC23AA9C5C1464E3A4B13" Name="docs">
+                                <Directory Id="dirDBC069C4698F561188BFAC152D42FA38" Name="media">
+                                    <Directory Id="dir41DDA7E2FB6436068E7F718FA5CE4BAB" Name="js">
+                                        <Component Id="cmp6106DC10983927C76E3AE717DB9322F8" Guid="{26F8529B-71CC-44CD-8582-8CA8630761A3}">
+                                            <File Id="fil1AA5D1333F99DD13493BD0F188A1BBE9" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\docs\media\js\doc.js" />
+                                        </Component>
+                                        <Component Id="cmpCB3622C4C472BBBB05E103881E4FFFCE" Guid="{9934393C-FD81-464C-BC44-0609469B70A2}">
+                                            <File Id="filD45585A34FFA5CC34BE838B814AB0FD0" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\docs\media\js\jquery.js" />
+                                        </Component>
+                                        <Component Id="cmp3C85297BAC70276C13CE408B4F22C20C" Guid="{B889101C-87EE-4E37-A842-A88FADFDBB46}">
+                                            <File Id="filA80ABFC5E5CC64DBABEDC50F2E2A0C97" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\docs\media\js\shBrushJScript.js" />
+                                        </Component>
+                                        <Component Id="cmpD5BFBD4189CF2B527D60DCCDD041075C" Guid="{BDD31D74-1796-44DF-8129-4F324D1F3950}">
+                                            <File Id="fil3E8EF186FCE2886C4B95B840B5BBC187" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\docs\media\js\shCore.js" />
+                                        </Component>
+                                    </Directory>
+                                </Directory>
+                            </Directory>
+                            <Directory Id="dir998EA76645896EEE9A707FF32C276AA1" Name="media">
+                                <Directory Id="dir3234A9D619D6AAAD0290E6C0EA1421D0" Name="js">
+                                    <Component Id="cmpD65CF450B3CF742523CC68A1DD29E47B" Guid="{763E9E47-21F7-4C0F-87D2-D5F3513AA1F1}">
+                                        <File Id="fil027B3CC525A4C9010B1AF61E26B20D29" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\media\js\FixedColumns.js" />
+                                    </Component>
+                                    <Component Id="cmp77B36538057E424A44C95F828AA250A2" Guid="{8FA1502E-1F4E-42F0-8EB1-6CDF27FC9F48}">
+                                        <File Id="filDD4EB7E32FFEB35E054B97FEE573954C" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\FixedColumns\media\js\FixedColumns.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirCF9D8145F79E2D3561C08E4159052586" Name="Scroller">
+                            <Directory Id="dirA3096DF05BD96CAA61352E4CEFB3C9B3" Name="media">
+                                <Directory Id="dir1860EE4370D96EFD56A9CEDE9E442360" Name="docs">
+                                    <Directory Id="dir5EFDAF98BFB50BC6D658EDD8A58D0034" Name="media">
+                                        <Directory Id="dirFFF3CF03FD0F0153615B188CD1D322B6" Name="js">
+                                            <Component Id="cmp90FA8E0D0E0A350634640EC6D8DE52B2" Guid="{67619EE6-CD11-4976-8B05-4ACBA43B2424}">
+                                                <File Id="fil2B60BF6DCE9D89C8E72B0BE352FF6FD1" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\docs\media\js\doc.js" />
+                                            </Component>
+                                            <Component Id="cmpC9E1ECC746EBDB66C84B1E4DD5904D5A" Guid="{B911EF2F-8446-4C36-B024-84A3BDAC8CED}">
+                                                <File Id="fil1B7E603A11378CED9745DB8389C0EB04" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\docs\media\js\jquery.js" />
+                                            </Component>
+                                            <Component Id="cmp8B71AF799DB811F9387857E610365FDE" Guid="{A858314E-20B5-4C90-9AE6-8ACB85EFA1EC}">
+                                                <File Id="fil2CF1AE6421310403325D1756A148B46B" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\docs\media\js\shBrushJScript.js" />
+                                            </Component>
+                                            <Component Id="cmp331E96D2AF9D97251665989E56656CC2" Guid="{3F4DF9DA-9C81-421D-B0FE-9DBE680C985C}">
+                                                <File Id="fil396D2F0F51EAFF299693A43CA7701689" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\docs\media\js\shCore.js" />
+                                            </Component>
+                                        </Directory>
+                                    </Directory>
+                                </Directory>
+                                <Directory Id="dirDBB32D5AA3148A2C6199241CD1088C00" Name="js">
+                                    <Component Id="cmp632804BB7B687859EC6AE06AD6C5EC37" Guid="{5F951FFC-90A1-44CF-AD72-AD7A62779F1E}">
+                                        <File Id="fil1DF0C72A5E9711273A8E58EA0081C18E" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\js\Scroller.js" />
+                                    </Component>
+                                    <Component Id="cmp306873C599745EC424ECA031C1776EA0" Guid="{DFE19A06-7492-4396-ABAE-EF31E86FC2F3}">
+                                        <File Id="filE0819A710E046FCD9446975073512664" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\Scroller\media\js\Scroller.min.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                        <Directory Id="dirF3B66F3F144E401D7941B31462B145D8" Name="TableTools">
+                            <Directory Id="dirB9F1FC8AEB344B4B4E84005FF5448F07" Name="media">
+                                <Directory Id="dir3650115234D618D03E6DBA8169F79101" Name="js">
+                                    <Component Id="cmpEF590C94EE6E3F2571C09A6A82637FCD" Guid="{EF7A9700-4B3C-406C-A0B8-E0B7A9D92FE0}">
+                                        <File Id="filB802C16AFF2617D12376521B001CF9AA" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\TableTools\media\js\TableTools.js" />
+                                    </Component>
+                                    <Component Id="cmp0C8F823C47ED21EE1711962DD0DD530C" Guid="{6477E150-8201-444B-9458-9814592D5A9B}">
+                                        <File Id="fil2DB061DDF7F7E3371A8FF7536A4D6927" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\TableTools\media\js\TableTools.min.js" />
+                                    </Component>
+                                    <Component Id="cmp8F4C39A9557C84FC6C13D4FD807CD175" Guid="{717868FC-33FF-46B9-A194-B6CAF3B03827}">
+                                        <File Id="fil799A89C9BF13C304F1E3BD5A6B322D7D" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\extras\TableTools\media\js\ZeroClipboard.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                    </Directory>
+                    <Directory Id="dir85A8AEC87E4A1B96DC24E3DAFAFE363D" Name="media">
+                        <Directory Id="dirBE4E0B13B04E7A7C798F6220A1E2DC6F" Name="js">
+                            <Component Id="cmpF12DDADBEFD9AB43D69001AECAE62AF3" Guid="{EE88EB56-AD21-4404-A25C-CA0575DE2999}">
+                                <File Id="fil5A31F449548163F025A4A27C97ECBB26" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\media\js\jquery.dataTables.js" />
+                            </Component>
+                            <Component Id="cmp00A2E1E4D461E452D4CC0F3EA0CD7F49" Guid="{FF648B04-9328-4C5A-B816-A075210E508A}">
+                                <File Id="fil9C224B8AAF04D87664922491E7F68A0A" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\media\js\jquery.dataTables.min.js" />
+                            </Component>
+                            <Component Id="cmp3135DDAA91A69662B35E80A82F417CC9" Guid="{777F4555-1ED3-4672-B5EB-986FE092A5DC}">
+                                <File Id="fil59A8DD19280D985093D91515FB916F5B" KeyPath="yes" Source="$(var.BuildLocation)\Scripts\DataTables-1.8.2\media\js\jquery.js" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="dirC0063C28B903F3E9F20671A44161B2A2" Name="Views">
+                <Component Id="cmp35CB783B4293502CFEF88ADBC30E0EC0" Guid="{EDFFFB5D-0C76-43A0-B5EB-66790C65FD9C}">
+                    <File Id="fil904A0DEDCDC9B608CAC11318EC417D4B" KeyPath="yes" Source="$(var.BuildLocation)\Views\Web.config" />
+                </Component>
+                <Component Id="cmp04E79A66D8A87F5A66552EA31B2C09D5" Guid="{2E04F841-26BD-485D-8BD4-E60AE37B32DF}">
+                    <File Id="fil69DF8488AAA3754057B82F83ADDBE82B" KeyPath="yes" Source="$(var.BuildLocation)\Views\_ViewStart.cshtml" />
+                </Component>
+                <Directory Id="dir7EA97EFBCA3A33BE5D2F5C5FA2B2905B" Name="Account">
+                    <Component Id="cmpA5DD12BDFEF82FCA48E3AF925A535DAA" Guid="{50BDC19F-742C-4DF1-9D5F-534FF7B635E9}">
+                        <File Id="fil3588512136094ED3C872541CD08E39E7" KeyPath="yes" Source="$(var.BuildLocation)\Views\Account\ChangePassword.cshtml" />
+                    </Component>
+                    <Component Id="cmpF4D23FBF52C22A244E294911124F6904" Guid="{6A8928BC-1297-4843-923A-AF02855C178B}">
+                        <File Id="fil809935E95BCC380D198E1B9975734814" KeyPath="yes" Source="$(var.BuildLocation)\Views\Account\ChangePasswordSuccess.cshtml" />
+                    </Component>
+                    <Component Id="cmpC9BC62995702ED46237B0895DE645E73" Guid="{ACE2D13A-0C0D-40E1-B200-994163FC2555}">
+                        <File Id="fil57D1215E2FFBE6F64606B17BDDEBAC20" KeyPath="yes" Source="$(var.BuildLocation)\Views\Account\LogOn.cshtml" />
+                    </Component>
+                    <Component Id="cmpF83F69D581714C344411D0230D1E44A8" Guid="{FF6FF727-848D-4787-94F7-1BF4201958C2}">
+                        <File Id="fil94AE500BE96D1A13EA4C28D56F8AB31F" KeyPath="yes" Source="$(var.BuildLocation)\Views\Account\Register.cshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirD962EC4A0CBAD378C2FCF43769354773" Name="Home">
+                    <Component Id="cmpEE51611B73848E08ED27565255056292" Guid="{97D77CD3-D415-45FE-AE89-D1B60DBC23BD}">
+                        <File Id="filF668F03D14366B3FD0EC757EA6841096" KeyPath="yes" Source="$(var.BuildLocation)\Views\Home\About.cshtml" />
+                    </Component>
+                    <Component Id="cmpBAAE62CEAE0C1FD082D27F899C56DBD3" Guid="{3F09BBEC-319A-475E-84BF-3D5BE470BD65}">
+                        <File Id="filB73126D7C911EB1B73E90E57C934ABC8" KeyPath="yes" Source="$(var.BuildLocation)\Views\Home\Index.cshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir47819713E616BA69884A8AE57E460369" Name="Shared">
+                    <Component Id="cmpB24EA28F8713CEF64CCEEE5B7E0D7E4A" Guid="{5C097432-E413-48CA-BBD9-4874AED93FCF}">
+                        <File Id="filA55E6CA19791BA230A31ECF4A64889D7" KeyPath="yes" Source="$(var.BuildLocation)\Views\Shared\Error.cshtml" />
+                    </Component>
+                    <Component Id="cmpD8316C7426539F2B341F5E50FE3D6E7A" Guid="{ED2D0B72-6D0F-4238-B49F-97ED82640905}">
+                        <File Id="fil1401D43332A50DB7278797FC4915DE0D" KeyPath="yes" Source="$(var.BuildLocation)\Views\Shared\_Layout.cshtml" />
+                    </Component>
+                    <Component Id="cmp678E74CB5A90BC68DC834A45A6254020" Guid="{1309F465-0255-4187-B2BA-10223C592F4D}">
+                        <File Id="fil185254B0ABEEDB86A19925B99F6C1794" KeyPath="yes" Source="$(var.BuildLocation)\Views\Shared\_LogOnPartial.cshtml" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="WebGrp">
+            <ComponentRef Id="cmp7404EBA752964BB6986E1CFADA223B22" />
+            <ComponentRef Id="cmp6B9D725E68FB5EB02B976985787AA618" />
+            <ComponentRef Id="cmp10195F7E437423E1CBAC9E2CFDA4D1F8" />
+            <ComponentRef Id="cmpEAAD96E19D2337FD7BF1F94D6B02FC8F" />
+            <ComponentRef Id="cmp48375997FC535BC8CAA8836680204BCA" />
+            <ComponentRef Id="cmpB8B09633C970E4C631C775F88CCFF3AA" />
+            <ComponentRef Id="cmp5892202513E0B0034B8B427E1A0BF3A9" />
+            <ComponentRef Id="cmpD50B063991B54F9880D5A9E74FE84CD3" />
+            <ComponentRef Id="cmp194CC70CC8393886A0B5C3ED26656A4C" />
+            <ComponentRef Id="cmp47C5016C45D29D4C720E34F5FD8D576F" />
+            <ComponentRef Id="cmp8609E4C5AF44B79B79792C6B9557315E" />
+            <ComponentRef Id="cmp4AB7918A9E6471636DC080F7D76E0BDB" />
+            <ComponentRef Id="cmp2E397730523E8ACC3198B577C53AC0F7" />
+            <ComponentRef Id="cmpE382FFD25BAF67C9148C6963BE3804F3" />
+            <ComponentRef Id="cmpAAF5141D9E415187D118B78BB57DCA15" />
+            <ComponentRef Id="cmp2E3D8BA9954D9797B44297A060717AE0" />
+            <ComponentRef Id="cmpF533AF5CD96EFF37F343D7CE7D97A6E4" />
+            <ComponentRef Id="cmp2DB9C1F957F4274BB0FF4823EFB35DF9" />
+            <ComponentRef Id="cmp23E7DB4B33AD988E6C7EFA7630E150F1" />
+            <ComponentRef Id="cmp3F3748C2F73C72BE5CC78DB8A1C6A6EB" />
+            <ComponentRef Id="cmp3CA2861BD4796B1E1D5954FB0423EEA8" />
+            <ComponentRef Id="cmpF239975BC07906A8079BC632EECCDAB7" />
+            <ComponentRef Id="cmpF670EEB2ADB17E226BD75B0D056FB182" />
+            <ComponentRef Id="cmp3F364B035E9A23777C4516EDBDA8D840" />
+            <ComponentRef Id="cmp1D43A424E8EB6857121B810C3757F6DC" />
+            <ComponentRef Id="cmpAA52EFBBF69BEBBE362EC3060CE4418B" />
+            <ComponentRef Id="cmp0F0F1FAB788645CDA8EEB6C4205A56B1" />
+            <ComponentRef Id="cmpFF12B8DFCBC18C81DD1214B08B693789" />
+            <ComponentRef Id="cmp4F268C20DFF631F42CE616A04969C667" />
+            <ComponentRef Id="cmp8CAEF1AC8DB08EF3F81E4ED1C05542FC" />
+            <ComponentRef Id="cmp844A7FB59CE6E7088D381578F158331E" />
+            <ComponentRef Id="cmp118A677E1395D98DE8358FB62661F8DA" />
+            <ComponentRef Id="cmp8F8DB90009B4CCFBC95DAC00347FD238" />
+            <ComponentRef Id="cmp419EEE84C0B9AD0FC1020E221B0BE69B" />
+            <ComponentRef Id="cmp9F1BE08A3449C1A7BEA807C3899E1168" />
+            <ComponentRef Id="cmpE1CDA1981CAA2F5E8240715E2855D77D" />
+            <ComponentRef Id="cmp7969AA35DB4830B8B0916B3A64AD433B" />
+            <ComponentRef Id="cmp2AC4BB3A18428AA0D8304D98B2D983E3" />
+            <ComponentRef Id="cmpD2247A4DD7BF914E7866A18CE8FDB06B" />
+            <ComponentRef Id="cmp17F6663CE1485CA9FA2EA52662897340" />
+            <ComponentRef Id="cmp6AC45E6220515FDAB745D39E52F684FD" />
+            <ComponentRef Id="cmp8A0FF25EF60CA0E25185954AE1508E12" />
+            <ComponentRef Id="cmp244FD1871C031CE9917ABC07DA9CAC11" />
+            <ComponentRef Id="cmpB38CE12831AE544D0E7E70205FC9F5F1" />
+            <ComponentRef Id="cmp4E5A951EFB38807BF578786B68D9088F" />
+            <ComponentRef Id="cmp84696C6C6649A21F94933E86CE984D1D" />
+            <ComponentRef Id="cmp5DF9680D86969E638E296D4AACABD93A" />
+            <ComponentRef Id="cmpC4BF1EE917BC4C474ED448D725AF949D" />
+            <ComponentRef Id="cmp0C8EE55591F1FAA8ED796DE593FA8E6C" />
+            <ComponentRef Id="cmp8DB6E2AF620C9F89C642D4B8D84B3331" />
+            <ComponentRef Id="cmpD8391E3125B0FA2BC3DC92F38ED542CD" />
+            <ComponentRef Id="cmpDEBC2ED1658E8CE9D1BBCA484EA4E061" />
+            <ComponentRef Id="cmp0D0E22E3074E9E2933529BCF2D32E7A6" />
+            <ComponentRef Id="cmp89F2D1F947F3223608F64A20721D4E44" />
+            <ComponentRef Id="cmpE0FF2AE0253AFDA9B21AE5926659275B" />
+            <ComponentRef Id="cmpE511CB3B38088C88CF795EB4FBCCFD92" />
+            <ComponentRef Id="cmp65E77C3F71CFA3021D3D1A88D88889BB" />
+            <ComponentRef Id="cmp53028973FAD97EFF0E0AEFD3941C1823" />
+            <ComponentRef Id="cmp896ECCBDA843ACCCFF11A7EF7162969F" />
+            <ComponentRef Id="cmp92F9B73F6CBCBA68A905B218929A092D" />
+            <ComponentRef Id="cmp8EA5BDDB5C88398E670AEE8BD10905DF" />
+            <ComponentRef Id="cmpB20D5F50C8766D2ED913CCFF00000333" />
+            <ComponentRef Id="cmp7D972CF6786568872E0AC5A3CA26F4D9" />
+            <ComponentRef Id="cmpC9706939E403B60316058E06DBD9574E" />
+            <ComponentRef Id="cmp6DD7076D66675CA5229E6CB2A6C543B8" />
+            <ComponentRef Id="cmpA5BE4EFE223300A6D2FE8F7BDE6BC315" />
+            <ComponentRef Id="cmp775CC8F7B7FFF10A7F7790416CF48B15" />
+            <ComponentRef Id="cmp40698C6317D011B9FF4DE8C0A2CEEC2F" />
+            <ComponentRef Id="cmp5995020DBDC839A95E975D44503110AD" />
+            <ComponentRef Id="cmp627C1880F55E0CB5721391B6B3D4BDCB" />
+            <ComponentRef Id="cmpE0B421402D6062ED38AF751108CC8841" />
+            <ComponentRef Id="cmp0C294A1CDB073163FB121DC79F5861DA" />
+            <ComponentRef Id="cmp7A10ED3D90873194A6FF4AE1B163FD57" />
+            <ComponentRef Id="cmp8F09663095AB5D92CED6C51C3B3EF25D" />
+            <ComponentRef Id="cmp4FC89131DC47BDA211D073CBDB8C47D9" />
+            <ComponentRef Id="cmp593C0B0932D5A9EA7F5F9781D0D34196" />
+            <ComponentRef Id="cmp3EC1700AF750B4B79FDFE03A0AA33EFA" />
+            <ComponentRef Id="cmp1502731CE88173A115474EE087FCA914" />
+            <ComponentRef Id="cmp4D694C5209F88085779256659B85E146" />
+            <ComponentRef Id="cmp828AC57DAD32CB4306A3CE68400C851A" />
+            <ComponentRef Id="cmpA47BABBD134865EB566C4444C83E4280" />
+            <ComponentRef Id="cmp89866DE603AB2680A86B57C0FAE0EBA8" />
+            <ComponentRef Id="cmp457CC0BDFAC057A0F4F3E8DA34CC33DB" />
+            <ComponentRef Id="cmp905AFB900BD22932624BA1B45A2CF607" />
+            <ComponentRef Id="cmp4A7E5E737757BB8B13BCE5C5B0EACE20" />
+            <ComponentRef Id="cmp280FE4921F01CDE442BD1C40E590A8F1" />
+            <ComponentRef Id="cmp4256AE8A39AC1414840134E77009940A" />
+            <ComponentRef Id="cmp62C76216B03F5115BAFF412B7A28663D" />
+            <ComponentRef Id="cmpB09D78E636E4D79DBBF0F5821F8504A0" />
+            <ComponentRef Id="cmp1A7B1D9D7D285089EF5225451BDB2E81" />
+            <ComponentRef Id="cmpFAB963603A901F667A70EA9CD422BFE7" />
+            <ComponentRef Id="cmp6475DB99E386803E1426574ED939787C" />
+            <ComponentRef Id="cmp485F0D42953FEF9DAEB68B3CA33319B7" />
+            <ComponentRef Id="cmp2B7469085B2C36313B3D9E4892DE4B03" />
+            <ComponentRef Id="cmpDF912F96DCEE58FC32575AE795A316BE" />
+            <ComponentRef Id="cmp2FE009891176DA124B4362954B33377C" />
+            <ComponentRef Id="cmp368B1A5B15ABB564A032E6768B941DDE" />
+            <ComponentRef Id="cmpCDF957B193D780024384C4841BA550FA" />
+            <ComponentRef Id="cmpD7E8A2E01974DD8A8C61A2C0B64181D2" />
+            <ComponentRef Id="cmp5D88B79AF8DFD2F4B925AA14AF69FE53" />
+            <ComponentRef Id="cmp9F006CB89D03E912883CE3A0183BE69D" />
+            <ComponentRef Id="cmpF0E5C4FB3FE99DC33D20A4BAE3FAD793" />
+            <ComponentRef Id="cmpB9997C563FD8FE3B1EFDD20CD45CAF87" />
+            <ComponentRef Id="cmp94E84EBA4478E55482792E659DAF3336" />
+            <ComponentRef Id="cmp47ABCC121F5F1F2AEBFBCB470CBE0BA9" />
+            <ComponentRef Id="cmpF2A3C995BCB6BEC3C3585E0F1A6795C0" />
+            <ComponentRef Id="cmp34F9C63073B7CA4DBAD02F47EF6C6D0D" />
+            <ComponentRef Id="cmpAA1160E4D1DB55E88756F9171DC48858" />
+            <ComponentRef Id="cmpA7292BDAC8D7CF74DD86C85EB0D096A7" />
+            <ComponentRef Id="cmp0675E430409FBD3F13244C120E615654" />
+            <ComponentRef Id="cmp1A0FAF9A10F1A8DE44964D9BB0995B05" />
+            <ComponentRef Id="cmp3FE1560E39DA6BAAEC14699DB8F598A1" />
+            <ComponentRef Id="cmpC79C69C510845F3220FE8A9903BD5DDE" />
+            <ComponentRef Id="cmp255A3E882642130A93260857B56854CF" />
+            <ComponentRef Id="cmpB3E416AFE215148BCE51A85CD79AEBD8" />
+            <ComponentRef Id="cmpA230CC6D77CD1FF60FF34A698BF0A69E" />
+            <ComponentRef Id="cmpCD8FCCCF7A4E57F6D2A47D033588BD05" />
+            <ComponentRef Id="cmp9B6F687CD653552719A65D85F80212CB" />
+            <ComponentRef Id="cmp3CEC8EBFA25D8CD2AC9D4C55DEC99FDA" />
+            <ComponentRef Id="cmp842831C1D1601E8D437B64AC1026EF17" />
+            <ComponentRef Id="cmpB57D46AC1BA23E5BE5CB2A816A7DE09C" />
+            <ComponentRef Id="cmp9288320512C3B0B281270BBF9F424613" />
+            <ComponentRef Id="cmp8011725ED8265AF3DEDEF5486D355A2C" />
+            <ComponentRef Id="cmpABCB382BCFED427F85F9BB2A668AA716" />
+            <ComponentRef Id="cmp1B0785481F8584A1AA0554A5CBDC0755" />
+            <ComponentRef Id="cmpB81CFC3CB78DBFCC4E20B1E57CA82959" />
+            <ComponentRef Id="cmpACD9314B6D0DD601CD26725BE8A1DE4D" />
+            <ComponentRef Id="cmpE0FE44A4E825D64AC1371112D5048A3A" />
+            <ComponentRef Id="cmpBE8834C97D27F54917A8BE053B35C07E" />
+            <ComponentRef Id="cmpFA17196C51ED0BE005776F62EB9B4C82" />
+            <ComponentRef Id="cmp9EAC341A36E90C1FA9CC14383CBF4975" />
+            <ComponentRef Id="cmp8E4CDC05C8FC9471B7F0BF708BE4D204" />
+            <ComponentRef Id="cmpACC5872D1A80ADC854D432DADD0FE095" />
+            <ComponentRef Id="cmp10FBBF93C41EFC243E4D2A176DC7FF8E" />
+            <ComponentRef Id="cmp9DAC9E6551FAFE764C94ACDA2D22CD51" />
+            <ComponentRef Id="cmp281807579F6F3E473DCF3842A01659E3" />
+            <ComponentRef Id="cmp9270640C9BFBDF2DF1F3BB2E1C6DC408" />
+            <ComponentRef Id="cmp676B6F6F61959CC7DF2EC0AAABE2F412" />
+            <ComponentRef Id="cmp6A181DC2919A0F0B940791C8D05705E7" />
+            <ComponentRef Id="cmp71EC43A62F44CE1BDC1B52BFB7C73703" />
+            <ComponentRef Id="cmp5E1A3928D1BF6129E26017BB37308DFB" />
+            <ComponentRef Id="cmp6106DC10983927C76E3AE717DB9322F8" />
+            <ComponentRef Id="cmpCB3622C4C472BBBB05E103881E4FFFCE" />
+            <ComponentRef Id="cmp3C85297BAC70276C13CE408B4F22C20C" />
+            <ComponentRef Id="cmpD5BFBD4189CF2B527D60DCCDD041075C" />
+            <ComponentRef Id="cmpD65CF450B3CF742523CC68A1DD29E47B" />
+            <ComponentRef Id="cmp77B36538057E424A44C95F828AA250A2" />
+            <ComponentRef Id="cmp90FA8E0D0E0A350634640EC6D8DE52B2" />
+            <ComponentRef Id="cmpC9E1ECC746EBDB66C84B1E4DD5904D5A" />
+            <ComponentRef Id="cmp8B71AF799DB811F9387857E610365FDE" />
+            <ComponentRef Id="cmp331E96D2AF9D97251665989E56656CC2" />
+            <ComponentRef Id="cmp632804BB7B687859EC6AE06AD6C5EC37" />
+            <ComponentRef Id="cmp306873C599745EC424ECA031C1776EA0" />
+            <ComponentRef Id="cmpEF590C94EE6E3F2571C09A6A82637FCD" />
+            <ComponentRef Id="cmp0C8F823C47ED21EE1711962DD0DD530C" />
+            <ComponentRef Id="cmp8F4C39A9557C84FC6C13D4FD807CD175" />
+            <ComponentRef Id="cmpF12DDADBEFD9AB43D69001AECAE62AF3" />
+            <ComponentRef Id="cmp00A2E1E4D461E452D4CC0F3EA0CD7F49" />
+            <ComponentRef Id="cmp3135DDAA91A69662B35E80A82F417CC9" />
+            <ComponentRef Id="cmp35CB783B4293502CFEF88ADBC30E0EC0" />
+            <ComponentRef Id="cmp04E79A66D8A87F5A66552EA31B2C09D5" />
+            <ComponentRef Id="cmpA5DD12BDFEF82FCA48E3AF925A535DAA" />
+            <ComponentRef Id="cmpF4D23FBF52C22A244E294911124F6904" />
+            <ComponentRef Id="cmpC9BC62995702ED46237B0895DE645E73" />
+            <ComponentRef Id="cmpF83F69D581714C344411D0230D1E44A8" />
+            <ComponentRef Id="cmpEE51611B73848E08ED27565255056292" />
+            <ComponentRef Id="cmpBAAE62CEAE0C1FD082D27F899C56DBD3" />
+            <ComponentRef Id="cmpB24EA28F8713CEF64CCEEE5B7E0D7E4A" />
+            <ComponentRef Id="cmpD8316C7426539F2B341F5E50FE3D6E7A" />
+            <ComponentRef Id="cmp678E74CB5A90BC68DC834A45A6254020" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
