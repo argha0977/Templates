@@ -1,0 +1,45 @@
+﻿//In this file you can define global variables for all available infrastructures
+
+//Import Namespaces for IO
+import System.IO
+
+//string variable value
+Var["SimpleString"] = "Hello Foo"
+
+//int variable value
+Var["SimpleInt"] = 10
+
+//bool variable value
+Var["SimpleBool"] = true
+
+//DateTime variable
+Var["DateTime"] = System.DateTime.Parse("10.10.2010")
+//some as above -> Var["DateTime"] = DateTime.Parse("2010-10-10")
+
+//Timespan variable
+Var["TimeSpan1"] = 10s//10 seconds
+Var["TimeSpan2"] = 1d//one day
+
+//string List
+Var["List"] = ["Element1", "Element2", "Element3"]
+
+//int Array
+Var["Array"] = (1, 2, 3, 4, 5)
+
+//Regular Expression
+Var["RegEx"] = System.Text.RegularExpressions.Regex("^[0-9]{1,20}$")
+
+//File for Read acess with conditions
+//You can use the whole
+fileName = Path.Combine("infrastructure", "Variables.var")
+if File.Exists(fileName):
+	Var["TextFileReader"] = System.IO.StreamReader(fileName)
+else:
+	Var["TextFileReader"] = null
+
+//Get Assembly
+Var["Assembly"] = null
+try:
+	Var["Assembly"] = System.Reflection.Assembly.LoadFrom("InfrastructureConfig.AppSpike.exe")
+except:
+	pass

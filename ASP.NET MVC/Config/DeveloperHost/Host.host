@@ -1,0 +1,15 @@
+﻿//In the host file you can define host specific variables
+//databse connections and email servers
+
+//Variables
+Var["diagnosisMessageThreshold"] = 10
+
+//EMail SmtpClient is a class from BCL
+SmtpClient.Port = 25
+SmtpClient.Host = "mymailhost.com"
+
+//Databases
+DbConnections["DB1"] = SqlConnection("Data Source=(localhost\\SQL2008);Initial Catalog=DB1;Integrated Security=SSPI;Max Pool Size = 300")
+DbConnections["DB2"] = SqlConnection("Data Source=(localhost\\SQL2008);Initial Catalog=DB2;Integrated Security=SSPI;Max Pool Size = 300")
+DbConnections["DB3"] = SqlConnection("Data Source=(localhost\\SQL2008);Initial Catalog=DB3;Integrated Security=SSPI;Max Pool Size = 300") if System.Net.Dns.GetHostName() == "Johns-PC"
+
