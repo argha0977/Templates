@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="{DE0148F9-AEBC-47E1-BEF1-3E27D29AA8D3}"
+           Name="Johannes Brunners Application"
+           Language="1033"
+           Version="1.0.0.0"
+           Manufacturer="Johannes Brunner"
+           UpgradeCode="{BF810065-021E-4D21-8CAC-373664CD7895}">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Installer" Level="1">
+      <Feature Id="WebApp" Title="Web App" Level="1" TypicalDefault="install">
+        <ComponentGroupRef Id="WebGrp"/>
+        <ComponentGroupRef Id="ManualWebGrp"/>
+      </Feature>
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <UIRef Id="WixUI_Advanced" />
+    <Property Id="ApplicationFolderName" Value="Apps" />
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+    <Property Id="TARGETDIR" Value="C:" />
+
+    <Property Id="IISROOT">
+      <RegistrySearch Id="IISROOT"
+                      Type="directory"
+                      Root="HKLM"
+                      Key="Software\Microsoft\InetStp"
+                      Name="PathWWWRoot" />
+    </Property>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="APPLICATIONFOLDER" Name="Apps">
+      </Directory>
+      <Directory Id="IISROOT" Name="WebDir">
+        <Directory Id="WEB_INSTALLFOLDER" Name="WebApp">
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>
