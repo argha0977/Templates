@@ -43,8 +43,7 @@ namespace Web {
         /// <returns></returns>
         [Definition, Scope(ObjectScope.Singleton)]
         public virtual IInfrastructureConfig InfrastructureConfig() {
-            IInfrastructureConfig config = new InfrastructureConfig.Dsl.InfrastructureConfig();
-            config.Execute();
+            IInfrastructureConfig config = new InfrastructureConfig.Dsl.InfrastructureConfig();            
             return config;
         }
 
