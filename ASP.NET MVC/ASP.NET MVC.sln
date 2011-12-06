@@ -5,16 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Tests", "Web.Tests\Web.Tests.csproj", "{8FB7A597-D482-4F54-B81C-B575EF6BA875}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{8EEC352B-2E69-4FAC-A32E-A21976F8D956}"
-	ProjectSection(SolutionItems) = preProject
-		Libraries\Boo.Lang.Compiler.dll = Libraries\Boo.Lang.Compiler.dll
-		Libraries\Boo.Lang.dll = Libraries\Boo.Lang.dll
-		Libraries\Boo.Lang.Parser.dll = Libraries\Boo.Lang.Parser.dll
-		Libraries\Datatables.Mvc.dll = Libraries\Datatables.Mvc.dll
-		Libraries\InfrastructureConfig.Dsl.dll = Libraries\InfrastructureConfig.Dsl.dll
-		Libraries\Rhino.DSL.dll = Libraries\Rhino.DSL.dll
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{725BA556-9350-4175-AB3A-B3A99E711A6E}"
 	ProjectSection(SolutionItems) = preProject
 		Config\Variables.var = Config\Variables.var
