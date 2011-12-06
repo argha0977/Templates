@@ -1,0 +1,7 @@
+<configuration>
+  <configSections>
+    <section name="infconfig" type="InfrastructureConfig.Dsl.InfrastructureConfigSection, InfrastructureConfig.Dsl" />
+  </configSections>
+  
+  <infconfig basedirectory="infrastructure" autoreload="false" />
+</configuration>
