@@ -89,7 +89,7 @@
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="InfrastructureConfig.Dsl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InfrastructureConfig.NET.0.9.4\lib\net40\InfrastructureConfig.Dsl.dll</HintPath>
+      <HintPath>..\packages\InfrastructureConfig.NET.0.9.5\lib\net40\InfrastructureConfig.Dsl.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Rhino.DSL">
