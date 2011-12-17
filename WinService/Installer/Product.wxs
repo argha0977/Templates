@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="{E5498869-DE2A-4465-84DD-2BEBEB1A68DE}"
+           Name="Johannes Brunners Application"
+           Language="1033"
+           Version="1.0.0.0"
+           Manufacturer="Johannes Brunner"
+           UpgradeCode="{8CAC0C4A-C702-4B38-A9A1-6E7426207C1E}">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Installer" Level="1">
+      <Feature Id="ServiceApp" Title="Windows Service" Level="1" TypicalDefault="install">
+        <ComponentGroupRef Id="ServiceGroup"/>
+        <ComponentGroupRef Id="ServiceManualGroup"/>
+      </Feature>
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <UIRef Id="WixUI_Advanced" />        
+    <Property Id="ApplicationFolderName" Value="ProgramFilesFolder" />
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+    
+    <!--<Property Id="TARGETDIR" Value="C:" />-->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="SERVICE" Name="Service" />
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>

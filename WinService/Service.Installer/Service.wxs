@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  
+  <Fragment>
+    <PropertyRef Id="WIX_ACCOUNT_LOCALSERVICE" />
+    <!-- Get the account running the service -->        
+    <DirectoryRef Id="SERVICE">
+      <Component Id="cmpService" Guid="{B1FB27E8-23E1-11E1-BE91-C7DA4724019B}">
+        <File Id="filService" KeyPath="yes" Source="$(var.BuildLocation)\Service.exe">                    
+        </File>      
+        
+        <!-- install service -->        
+        <ServiceInstall Id="service_Service" 
+                        Name="Service" 
+                        DisplayName="Service" 
+                        Description="Service" 
+                        Start="auto" 
+                        ErrorControl="normal" 
+                        Interactive="no" 
+                        Type="ownProcess" 
+                        Vital="no"
+                        Account="[WIX_ACCOUNT_LOCALSERVICE]" />        
+        
+        <ServiceControl Id="servicecontrol_Service"
+                        Name="Service"
+                        Stop="both"
+                        Start="install"
+                        Remove="uninstall"
+                        Wait="yes" />   
+        
+        <util:EventSource Log="Service" Name="Service" EventMessageFile="[NETFRAMEWORK40FULLINSTALLROOTDIR]EventLogMessages.dll" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ServiceManualGroup">
+      <ComponentRef Id="cmpService" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

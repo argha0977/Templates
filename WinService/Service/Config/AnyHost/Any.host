@@ -1,0 +1,2 @@
+﻿DbConnections["ServiceDb"] = SqlConnection("Data Source=localhost\\SQL2008;Initial Catalog=WinService;Integrated Security=SSPI;")
+
