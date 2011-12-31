@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="{bcce15b5-a449-4972-9da3-736c9b238888}"
+           Name="Johannes Brunners Application"
+           Language="1033"
+           Version="1.0.0.0"
+           Manufacturer="Johannes Brunner"
+           UpgradeCode="{9116bc01-a2b9-4ef6-81b4-e7fc6f8713ed}">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="Installer" Level="1">
+      <Feature Id="ConsoleApp" Title="Console Application" Level="1" TypicalDefault="install">
+        <ComponentGroupRef Id="ConsoleGroup"/>
+        <ComponentGroupRef Id="ConsoleManualGroup"/>
+      </Feature>
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <UIRef Id="WixUI_Advanced" />        
+    <Property Id="ApplicationFolderName" Value="ProgramFilesFolder" />
+    <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+    
+    <!--<Property Id="TARGETDIR" Value="C:" />-->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CONSOLE" Name="Console Application" />
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  
+  <Fragment>        
+    <DirectoryRef Id="CONSOLE">
+      <Component Id="cmpConsole" Guid="{9116bc01-a2b9-4ef6-81b4-e7fc6f8713ed}">
+        <File Id="filService" KeyPath="yes" Source="$(var.BuildLocation)\Console.exe">                    
+        </File>                              
+        <util:EventSource Log="Application" Name="Console" EventMessageFile="[NETFRAMEWORK40FULLINSTALLROOTDIR]EventLogMessages.dll" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ConsoleManualGroup">
+      <ComponentRef Id="cmpConsole" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

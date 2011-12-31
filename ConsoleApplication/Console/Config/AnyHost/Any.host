@@ -1,0 +1,2 @@
+﻿DbConnections["ConsoleDb"] = SqlConnection("Data Source=localhost\\SQL2008;Initial Catalog=ConsoleApp;Integrated Security=SSPI;")
+

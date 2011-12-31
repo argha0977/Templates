@@ -1,0 +1,6 @@
+<configuration>
+  <configSections>
+    <section name="dslconfig" type="DslConfig.DslConfigurationSection, DslConfig" />
+  </configSections>
+  <dslconfig basedirectory="config" autoreload="false" throwExceptions="false"/>
+</configuration>
